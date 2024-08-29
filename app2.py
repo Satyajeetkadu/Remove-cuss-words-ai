@@ -14,8 +14,8 @@ from openai import OpenAI  # Import OpenAI client
 from pathlib import Path
 
 # Set the path to the ffmpeg executable
-os.environ["IMAGEIO_FFMPEG_EXE"] = "./final_App/ffmpeg"
-os.chmod("./final_App/ffmpeg", 0o755)
+os.environ["IMAGEIO_FFMPEG_EXE"] = "final_App/ffmpeg"
+os.chmod("final_App/ffmpeg", 0o755)
 
 # Streamlit app
 st.title("Remove Cuss words in one click!")
