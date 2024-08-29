@@ -5,3 +5,4 @@ python-dotenv==1.0.1
 streamlit==1.37.1
 thefuzz==0.22.1
 whisper_timestamped==1.15.4
+!bash setup.sh
