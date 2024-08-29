@@ -13,6 +13,7 @@ from thefuzz import fuzz, process  # For fuzzy matching
 from openai import OpenAI  # Import OpenAI client
 os.environ["IMAGEIO_FFMPEG_EXE"] = ffmpeg.get_ffmpeg_version()
 # Optionally, check if ffmpeg is available
+
 def check_ffmpeg():
     try:
         result = subprocess.run([os.environ["IMAGEIO_FFMPEG_EXE"], '-version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
