@@ -15,6 +15,8 @@ from pathlib import Path
 
 # Set the path to the ffmpeg executable
 os.environ["IMAGEIO_FFMPEG_EXE"] = "./ffmpeg"
+os.chmod("./ffmpeg", 0o755)
+
 # Streamlit app
 st.title("Remove Cuss words in one click!")
 
