@@ -11,23 +11,10 @@ from dotenv import load_dotenv
 import re
 from thefuzz import fuzz, process  # For fuzzy matching
 from openai import OpenAI  # Import OpenAI client
+from pathlib import Path
 
-
-# Use the path provided by imageio-ffmpeg directly
-os.environ["IMAGEIO_FFMPEG_EXE"] = ffmpeg.get_ffmpeg_exe()
-# Optionally, check if ffmpeg is available
-
-# def check_ffmpeg():
-#     try:
-#         result = subprocess.run([os.environ["IMAGEIO_FFMPEG_EXE"], '-version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-#         if result.returncode == 0:
-#             print("ffmpeg is installed and available in the path.")
-#         else:
-#             print("ffmpeg is installed but not available in the path.")
-#     except FileNotFoundError:
-#         print("ffmpeg is not installed or not available in the path.")
-
-# check_ffmpeg()
+# Set the path to the ffmpeg executable
+os.environ["IMAGEIO_FFMPEG_EXE"] = "./ffmpeg"
 # Streamlit app
 st.title("Remove Cuss words in one click!")
 
