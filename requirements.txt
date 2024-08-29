@@ -6,4 +6,3 @@ streamlit==1.37.1
 thefuzz==0.22.1
 whisper_timestamped==1.15.4
 imageio-ffmpeg
-llvmlite>=0.39.0
