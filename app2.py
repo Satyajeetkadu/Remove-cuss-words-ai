@@ -12,7 +12,10 @@ import re
 from thefuzz import fuzz, process  # For fuzzy matching
 from openai import OpenAI  # Import OpenAI client
 from pathlib import Path
+import tqdm
 
+# Disable tqdm when running in Streamlit
+tqdm.tqdm = lambda *i, **kwargs: i[0]
 # Set the path to the ffmpeg executable
 os.environ["IMAGEIO_FFMPEG_EXE"] = "./ffmpeg"
 os.chmod("./ffmpeg", 0o755)
